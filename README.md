@@ -54,8 +54,10 @@ The result is a "foo".
 To install a cp-all-in-one stack you have to execute this commands with helm:
 
 `helm repo add confluentinc https://confluentinc.github.io/cp-helm-charts/`
+
 `helm repo update`
-`helm install confluentinc/cp-helm-charts --name my-confluent --version 0.6.0`
+
+`helm install my-confluent confluentinc/cp-helm-charts --version 0.6.0`
 
 After that you will have the stack installed with pods, services and needed objects.
 
