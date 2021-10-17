@@ -12,10 +12,10 @@ nodes:
         node-labels: "ingress-ready=true"
   extraPortMappings:
   - containerPort: 80
-    hostPort: 90
+    hostPort: 80
     protocol: TCP
   - containerPort: 443
-    hostPort: 994
+    hostPort: 443
     protocol: TCP
 - role: worker
   image: nestybox/kindestnode:v1.19.4
