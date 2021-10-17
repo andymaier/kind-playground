@@ -17,6 +17,15 @@ nodes:
   - containerPort: 443
     hostPort: 443
     protocol: TCP
+  - containerPort: 9092
+    hostPort: 49092
+    protocol: TCP
+  - containerPort: 8082
+    hostPort: 48082
+    protocol: TCP
+  - containerPort: 8088
+    hostPort: 48088
+    protocol: TCP  
 - role: worker
   image: nestybox/kindestnode:v1.19.4
 - role: worker

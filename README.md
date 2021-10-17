@@ -20,6 +20,14 @@ In my case I am using sysbox/nestybox (https://www.nestybox.com/) engine and all
 This command creates a kind cluser with one control-pane and 3 workers.
 The name of the cluster is "confluent-cluster". 
 
+The following TCP ports will be exposed after creation. Make sure this ports are not bind by another process.
+
+80 http
+443 https
+9092 exposed as -> 49092 kafka
+8082 exposed as -> 48082 rest-proxy
+8088 exposed as -> 48088 ksql
+
 ### Delete ###
 To delete this cluster execute this command:
 
@@ -57,3 +65,6 @@ To have an access to the control center in the created cluster an ingress have t
 This can be done by executing:
 
 `kubectl apply -f ingress-control-center.yml`
+
+This ingress lets you access to the control center over the subdomain control-center.ocp4.de
+If you wish to change it you have to change the host definition.
